@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">Hitung Umur</string>
+    <string name="app_name">Assessment 2</string>
+    <string name="tentang_aplikasi">Tentang Aplikasi</string>
+    <string name="copyright">
+        Hitung Umur ini merupakan sebuah aplikasi Android untuk menghitung umur anda dari anda lahir hingga sekarang,
+        sehingga anda dapat mengetahui umur anda dengan detail, tidak hanya tahun tetapi bulan dan tanggal dapat diketahui juga.
+        \n\n Aplikasi ini dibuat untuk Assessment 2. Temukan kodenya di https://github.com/dimas235/Asessment-1-Mobpro \n\nCopyright © 2023 Dimas Prayuda.\nAll rights reserved.
+
+    </string>
+
+    <string name="bagikan">Bagikan</string>
+    <string name="bagikan_template">Sudah berapa tahun: %1$s sekarang \n bulan: %2$s \n
+    tanggal: %3$s\n\n%4$s\n%5$s</string>
+
+
+
 </resources>
