@@ -17,8 +17,6 @@ class HitungUmurViewModel(private val db: UmurDao) : ViewModel() {
 
     private val hasil = MutableLiveData<Hasil>()
 
-    val data = db.getLastUmur()
-
     fun perhitungan (tahunLahir: Int, bulanLahir: Int, tanggalLahir: Int) {
 
         val cal = Calendar.getInstance()

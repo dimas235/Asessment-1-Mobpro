@@ -12,6 +12,7 @@
     <string name="bagikan_template">Sudah berapa tahun: %1$s sekarang \n bulan: %2$s \n
     tanggal: %3$s\n\n%4$s\n%5$s</string>
 
-
+    <string name="belum_ada_data">Belum ada data</string>
+    <string name="histori">Histori</string>
 
 </resources>

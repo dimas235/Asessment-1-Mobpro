@@ -5,4 +5,10 @@
     <item
         android:id="@+id/menu_about"
         android:title="@string/tentang_aplikasi" />
+
+    <item
+        android:id="@+id/menu_histori"
+        android:title="@string/histori"
+        android:icon="@drawable/baseline_history_24"
+        app:showAsAction="ifRoom"/>
 </menu>

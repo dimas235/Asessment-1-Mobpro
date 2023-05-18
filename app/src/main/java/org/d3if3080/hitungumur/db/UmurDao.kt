@@ -11,6 +11,6 @@ interface UmurDao {
     @Insert
     fun insert(umur: UmurEntity)
 
-    @Query("SELECT * FROM umur ORDER BY id DESC LIMIT 1")
-    fun  getLastUmur(): LiveData<UmurEntity?>
+    @Query("SELECT * FROM umur ORDER BY id DESC")
+    fun getLastUmur(): LiveData<List<UmurEntity>>
 }
