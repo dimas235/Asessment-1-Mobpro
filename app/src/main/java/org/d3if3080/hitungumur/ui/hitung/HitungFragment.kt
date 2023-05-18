@@ -1,15 +1,16 @@
-package org.d3if3080.hitungumur.ui
+package org.d3if3080.hitungumur.ui.hitung
 
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.view.*
-import androidx.core.app.ShareCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import org.d3if3080.hitungumur.R
 import org.d3if3080.hitungumur.databinding.FragmentHitungBinding
+import org.d3if3080.hitungumur.db.UmurDb
 import org.d3if3080.hitungumur.model.Hasil
 import java.util.*
 
@@ -30,7 +31,9 @@ class HitungFragment : Fragment(){
 
     private lateinit var binding: FragmentHitungBinding
     private val viewModel: HitungUmurViewModel by lazy {
-        ViewModelProvider(requireActivity())[HitungUmurViewModel::class.java]
+        val db = UmurDb.getInstance(requireContext())
+        val factory = HitungViewModelFactory(db.dao)
+        ViewModelProvider(this, factory)[HitungUmurViewModel::class.java]
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
@@ -43,6 +46,10 @@ class HitungFragment : Fragment(){
         binding.btnHitung.setOnClickListener { hitungUmur() }
         binding.bagikan.setOnClickListener { shareData() }
         viewModel.getHasil().observe(requireActivity()) { showResult(it) }
+        viewModel.data.observe(viewLifecycleOwner, {
+            if(it == null) return@observe
+            Log.d("HitungFragment", "Data tersimpan. ID = ${it.id}")
+        })
     }
 
     private fun shareData() {
