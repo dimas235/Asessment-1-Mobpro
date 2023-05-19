@@ -13,4 +13,7 @@ interface UmurDao {
 
     @Query("SELECT * FROM umur ORDER BY id DESC")
     fun getLastUmur(): LiveData<List<UmurEntity>>
+
+    @Query("DELETE FROM umur")
+    fun clearData()
 }

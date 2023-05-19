@@ -32,15 +32,18 @@ class HitungUmurViewModel(private val db: UmurDao) : ViewModel() {
             umurTahun--
             umurBulan += 12
         }
+
+        val dataUmur = UmurEntity(
+            tahunLahir = tahunLahir,
+            bulanLahir = bulanLahir,
+            tanggalLahir = tanggalLahir,
+        )
+
         hasil.value = Hasil(umurTahun, umurBulan, umurTanggal)
 
         viewModelScope.launch {
             withContext(Dispatchers.IO){
-            val dataUmur = UmurEntity(
-                    tahunLahir = tahunLahir,
-                    bulanLahir = bulanLahir,
-                    tanggalLahir = tanggalLahir
-                )
+
                 db.insert(dataUmur)
             }
         }
