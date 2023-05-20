@@ -67,4 +67,5 @@ class HistoriFragment : Fragment() {
             }
             .show()
     }
+
 }

@@ -22,5 +22,6 @@
     <string name="hapus">Hapus</string>
     <string name="batal">Batal</string>
     <string name="konfirmasi_hapus" />
+    <string name="delete" />
 
 </resources>

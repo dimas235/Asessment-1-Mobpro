@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/hitungFragment">
+    app:startDestination="@id/loadingFragment">
 
     <fragment
         android:id="@+id/hitungFragment"
@@ -25,4 +25,12 @@
         android:id="@+id/historiFragment"
         android:name="org.d3if3080.hitungumur.ui.histori.HistoriFragment"
         android:label="HistoriFragment" />
+    <fragment
+        android:id="@+id/loadingFragment"
+        android:name="org.d3if3080.hitungumur.LoadingFragment"
+        android:label="LoadingFragment" >
+        <action
+            android:id="@+id/action_loadingFragment_to_hitungFragment2"
+            app:destination="@id/hitungFragment" />
+    </fragment>
 </navigation>
