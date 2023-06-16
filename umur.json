@@ -1,0 +1,7 @@
+[
+  {"Umur":"1 sampai 10","Kategori":"Anak anak"},
+  {"Umur":"11 sampai 25","Kategori":"Remaja"},
+  {"Umur":"26 sampai 45","Kategori":"Dewasa"},
+  {"Umur":"45 sampai 65","Kategori":"Lansia"},
+  {"Umur":"66 sampai 100","Kategori":"Manula"}
+]
