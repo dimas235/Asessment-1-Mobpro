@@ -7,6 +7,10 @@
         android:title="@string/tentang_aplikasi" />
 
     <item
+        android:id="@+id/daftar_umur"
+        android:title="Daftar Umur" />
+
+    <item
         android:id="@+id/menu_histori"
         android:title="@string/histori"
         android:icon="@drawable/baseline_history_24"

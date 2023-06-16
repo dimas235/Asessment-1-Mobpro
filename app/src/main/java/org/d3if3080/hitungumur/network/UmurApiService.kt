@@ -17,4 +17,8 @@ object UmurApi {
     val service: UmurApiService by lazy {
         retrofit.create(UmurApiService::class.java)
     }
+
+    fun getImageUrl(Gambar: String): String {
+        return "$BASE_URL/$Gambar.jpg"
+    }
 }

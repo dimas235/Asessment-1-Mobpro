@@ -32,6 +32,11 @@ class HitungFragment : Fragment(){
                 findNavController().navigate(R.id.action_hitungFragment_to_aboutFragment)
                 return true
             }
+
+            R.id.daftar_umur -> {
+                findNavController().navigate(R.id.action_hitungFragment_to_umurFragment)
+                return true
+            }
         }
             return super.onOptionsItemSelected(item)
         }
