@@ -90,7 +90,7 @@ class HitungFragment : Fragment(){
                 binding.tvHasil.text = "Tahun lahir tidak valid"
             } else if (tahunLahirInt == tahunSekarang && bulanLahirInt > bulanSekarang || bulanLahirInt > 12) {
                 binding.tvHasil.text = "Bulan lahir tidak valid"
-            } else if (tahunLahirInt == tahunSekarang && bulanLahirInt == bulanSekarang || tanggalLahirInt > tanggalSekarang || tanggalLahirInt > 31) {
+            } else if (tahunLahirInt == tahunSekarang && bulanLahirInt == bulanSekarang || tanggalLahirInt > 31) {
                 binding.tvHasil.text = "Tanggal lahir tidak valid"
             } else {
                 viewModel.umur(tahunLahirInt, bulanLahirInt, tanggalLahirInt)
