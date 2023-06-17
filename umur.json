@@ -1,7 +1,7 @@
 [
-  {"Umur":"1 sampai 10","Kategori":"Anak anak", "GambarId":"Anak"},
-  {"Umur":"11 sampai 25","Kategori":"Remaja", "GambarId":"Remaja" },
-  {"Umur":"26 sampai 45","Kategori":"Dewasa", "GambarId":"Dewasa" },
-  {"Umur":"45 sampai 65","Kategori":"Lansia", "GambarId":"Lansia" },
-  {"Umur":"66 sampai 100","Kategori":"Manula", "GambarId":"Manula" }
+  {"umur":"1 sampai 10","kategori":"Anak anak", "gambar":"Anak"},
+  {"umur":"11 sampai 25","kategori":"Remaja", "gambar":"Remaja" },
+  {"umur":"26 sampai 45","kategori":"Dewasa", "gambar":"Dewasa" },
+  {"umur":"45 sampai 65","kategori":"Lansia", "gambar":"Lansia" },
+  {"umur":"66 sampai 100","kategori":"Manula", "gambar":"Manula" }
 ]
