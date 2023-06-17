@@ -21,9 +21,10 @@ class UmurAdapter : RecyclerView.Adapter<UmurAdapter.UmurViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: UmurViewHolder, position: Int) {
-        val umur = umurList[position]
+        val umur = getItem(position)
         holder.bind(umur)
     }
+
 
     override fun getItemCount(): Int = umurList.size
 
@@ -32,17 +33,23 @@ class UmurAdapter : RecyclerView.Adapter<UmurAdapter.UmurViewHolder>() {
         notifyDataSetChanged()
     }
 
+    fun getItem(position: Int): ListUmur {
+        return umurList[position]
+    }
+
+
+
     inner class UmurViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val umurTextView: TextView = itemView.findViewById(R.id.umurTextView)
         private val kategoriTextView: TextView = itemView.findViewById(R.id.kategoriTextView)
         private val imageView: ImageView = itemView.findViewById(R.id.imageView)
 
         fun bind(umur: ListUmur) {
-            umurTextView.text = umur.Umur
-            kategoriTextView.text = umur.Kategori
+            umurTextView.text = umur.umur
+            kategoriTextView.text = umur.kategori
             // Menggunakan Glide untuk memuat gambar dari URL
             Glide.with(itemView)
-                .load(UmurApi.getImageUrl(umur.Gambar))
+                .load(UmurApi.getImageUrl(umur.gambar))
                 .placeholder(R.drawable.ic_baseline_broken_image_24)
                 .into(imageView)
         }
@@ -53,4 +60,8 @@ class UmurAdapter : RecyclerView.Adapter<UmurAdapter.UmurViewHolder>() {
             return "https://example.com/images/$gambarId.png"
         }
     }
+    override fun getItemId(position: Int): Long {
+        return position.toLong()
+    }
+
 }

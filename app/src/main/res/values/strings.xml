@@ -23,5 +23,6 @@
     <string name="batal">Batal</string>
     <string name="konfirmasi_hapus" />
     <string name="delete" />
+    <string name="koneksi_error" />
 
 </resources>

@@ -15,4 +15,6 @@ class HistoriViewModel(private val db: UmurDao) : ViewModel() {
             db.clearData()
         }
     }
+
+
 }
